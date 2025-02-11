@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255, 251, 245;
+  --foreground: 43, 75, 124;
+  --card: 255, 255, 255;
+  --card-foreground: 43, 75, 124;
+  --popover: 255, 255, 255;
+  --popover-foreground: 43, 75, 124;
+  --primary: 43, 75, 124;
+  --primary-foreground: 255, 251, 245;
+  --secondary: 197, 165, 114;
+  --secondary-foreground: 255, 251, 245;
+  --muted: 179, 196, 227;
+  --muted-foreground: 43, 75, 124;
+  --accent: 179, 196, 227;
+  --accent-foreground: 43, 75, 124;
+  --destructive: 255, 100, 100;
+  --destructive-foreground: 255, 251, 245;
+  --border: 197, 165, 114;
+  --input: 197, 165, 114;
+  --ring: 197, 165, 114;
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  padding-top: 4rem; /* Add padding to account for fixed header */
+}
+
+.elegant-heading {
+  @apply font-serif text-secondary;
+}
+
+.content-wrapper {
+  @apply w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8;
+}
+
+.image-shadow {
+  @apply shadow-md hover:shadow-lg transition-shadow duration-300;
+}
+
+/* Mobile menu styles */
+#menu-toggle:checked + label + div {
+  @apply translate-x-0;
+}
+
+.menu-item {
+  @apply text-secondary-foreground hover:text-secondary transition-colors duration-200 font-serif text-xl;
+}
+
+h1,
+.gold {
+  color: rgb(var(--secondary)) !important;
+}
+
+a:hover {
+  color: rgb(var(--secondary)) !important;
+}
+
+button.w-full {
+  background-color: rgb(233 208 167) !important
+}
+
+header {
+  background-color: #f1e6d2 !important
+}
+
+.select__control {
+  background-color: rgb(var(--background)) !important;
+  border-color: rgb(var(--input)) !important;
+}
+
