@@ -74,3 +74,6 @@ header, nav {
   border-color: rgb(var(--input)) !important;
 }
 
+.center{
+  text-align: center;
+}

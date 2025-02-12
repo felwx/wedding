@@ -9,7 +9,7 @@ interface VideoPlayerProps {
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, title, horientation }) => {
   const aspect = horientation === 'vertical' ? "w-[320px] h-[570px] rounded-lg shadow-lg" : "aspect-w-16 aspect-h-9 rounded-lg shadow-lg" ;
   return (
-    <div className="w-full max-w-4xl mx-auto my-8">
+    <div className="w-full max-w-4xl mx-auto">
       <h2 className="elegant-heading text-2xl sm:text-3xl mb-4 text-center">{title}</h2>
       {/* <div className={aspect}>
         <video className="w-full h-full object-cover rounded-lg shadow-lg" controls preload="metadata">
