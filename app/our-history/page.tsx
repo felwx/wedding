@@ -11,16 +11,13 @@ export default function OurHistory() {
         <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
           <Image
             src="/historia1.jpg"
-            alt="Jane and John's first meeting"
+            alt="Sandra y Félix"
             width={300}
             height={200}
             className="rounded-lg shadow-md"
           />
           <p className="text-lg">
-            Desde niños, compartimos veranos inolvidables en Alcalá de la Vega, el pueblo que nos vio crecer. Cada
-            verano pasábamos 15 días inolvidables. Aunque el tiempo juntos era breve, siempre había algo especial entre
-            nosotros. Lo que empezó como una amistad de infancia fue creciendo, hasta que un día nos dimos cuenta de que
-            lo que sentíamos iba mucho más allá de los veranos compartidos.
+          Nuestra historia empieza en nuestro pueblo. En Alcalá de la Vega pasábamos veranos inolvidables y allí es donde nos conocimos siendo unos niños. Los años fueron pasando y aunque esos dos niños que solo se veían en verano, durante 15 días esa amistad siempre fue especial. Cada verano, al llegar al pueblo, los dos sentían los mismos nervios y se hacían las mismas preguntas. ¿Cuándo vendrá? ¿Se acordará de mí? ¿Tendrá ganas de verme?
           </p>
         </div>
       </section>
@@ -30,28 +27,38 @@ export default function OurHistory() {
         <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-4">
           <Image
             src="/historia2.jpg"
-            alt="Jane and John's first date"
+            alt="Sandra y Félix"
             width={300}
             height={200}
             className="rounded-lg shadow-md"
           />
           <p className="text-lg">
-            Llevábamos toda la vida viéndonos solo unos días al año, pero cada vez que nos reencontrábamos, era como si
-            el tiempo no hubiera pasado. Aquel verano, cuando teníamos 20 y 19 años, todo cambió. Sin esperarlo, lo que
-            siempre había sido un amor de verano se convirtió en algo más profundo, lo nuestro no era solo un amor de
-            verano… era un amor para siempre.
+          A pesar de solo vernos en verano, cada vez que nos volvíamos a encontrar es como si el tiempo no hubiese pasado. Cada vez nuestra relación era más fuerte y compartimos veranos increíbles juntos, pero la distancia y nuestra edad nos impedía seguir con nuestra relación después del verano. Al final llego el verano que cambio nuestras vidas, cuando menos lo esperábamos todo cambió para siempre. Con 20 y 19 años nos atrevimos a hacer la locura más grande del mundo y empezar nuestro camino juntos.
           </p>
         </div>
       </section>
 
       <section className="mb-8">
-        <h2 className="elegant-heading text-2xl sm:text-3xl mb-4">La pedida</h2>
+        <h2 className="elegant-heading text-2xl sm:text-3xl mb-4">Nuestro amor a distancia</h2>
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+          <Image
+            src="/historia3.jpg"
+            alt="Sandra y Félix"
+            width={300}
+            height={200}
+            className="rounded-lg shadow-md"
+          />
+          <p className="text-lg">
+          Nuestra relación empezó siendo una relación a distancia, con infinidad de viajes entre Barcelona y Valencia. Para casi todo el mundo tener una relación así habría sido imposible, pero para nosotros fue lo más bonito de nuestra vida. Miles de horas de videollamadas, hablando cada noche de todo lo que habíamos hecho ese día y muriéndonos de ganas de volver a estar juntos. Siempre esperando a que llegase el finde semana que nos veríamos y disfrutar al máximo cada segundo juntos. Así pasamos nuestros primeros 4 años, unidos en la distancia. Después de todo este tiempo porfía llegó el día en que nos fuimos a vivir juntos, y de eso han pasado ya más de 7 años.
+          </p>
+        </div>
+      </section>
+
+      <section className="mb-8 items-center">
+        <h2 className="elegant-heading text-2xl sm:text-3xl mb-4 center">La pedida</h2>
         <div className="flex flex-col items-center gap-4">
           <p className="text-lg text-center max-w-2xl">
-            Después de 10 años juntos y muchas aventuras compartidas, Félix le pidió matrimonio a Sandra durante las
-            fiestas de Alcalá de la Vega. Aunque Félix es tímido, reunió todo su valor y, delante de todo el pueblo, le
-            hizo la gran pregunta. Fue un momento inolvidable, y, por supuesto, Sandra dijo que sí. ¡Ahora comienza un
-            nuevo capítulo en su historia de amor!
+          En nuestro pueblo nos conocimos, allí empezamos este bonito camino juntos, después de 10 años y muchas aventuras compartidas, en Alcalá dimos el siguiente paso en nuestro camino. En la noche en la que celebramos nuestro décimo aniversario juntos ocurrió algo inesperado…
           </p>
           <VideoPlayer src="/pedida.mp4"/>
         </div>
