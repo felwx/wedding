@@ -6,12 +6,13 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const images = [
-  { src: "/imagen_prueba.jpg", alt: "Couple 1" },
-  { src: "/placeholder.svg", alt: "Couple 2" },
-  { src: "/placeholder.svg", alt: "Couple 3" },
-  { src: "/placeholder.svg", alt: "Couple 4" },
-  { src: "/placeholder.svg", alt: "Couple 5" },
-  { src: "/placeholder.svg", alt: "Couple 6" },
+  { src: "/galeria1.jpg", alt: "Couple 1" },
+  { src: "/galeria2.jpg", alt: "Couple 2" },
+  { src: "/galeria3.jpg", alt: "Couple 3" },
+  { src: "/galeria4.jpg", alt: "Couple 4" },
+  { src: "/galeria5.jpg", alt: "Couple 5" },
+  { src: "/galeria6.jpg", alt: "Couple 6" },
+  { src: "/galeria7.jpg", alt: "Couple 6" },
 ]
 
 export default function Gallery() {
