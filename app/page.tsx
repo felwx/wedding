@@ -72,7 +72,7 @@ export default function Home() {
     <div className="text-center content-wrapper">
       <div className="max-w-2xl mx-auto mb-6 md:mb-8">
         <h1 className="elegant-heading text-3xl sm:text-4xl md:text-5xl mb-6 md:mb-8">Bienvenido a nuestra boda</h1>
-        <Slider {...settings} className="relative">
+        {/* <Slider {...settings} className="relative">
           {images.map((image, index) => (
             <div key={index} className="relative aspect-[3/2]">
               <Image
@@ -83,7 +83,14 @@ export default function Home() {
               />
             </div>
           ))}
-        </Slider>
+        </Slider> */}
+        <div className="w-full flex justify-center">
+          <img
+            src="/megabanner.jpg" // Reemplaza con la ruta correcta
+            alt="Mega Banner"
+            className="w-full max-w-[1635px] h-auto"
+          />
+        </div>
       </div>
       <h2 className="elegant-heading text-2xl sm:text-3xl mb-4">Acompáñanos a celebrar nuestra unión</h2>
       <div className="mb-8">
@@ -96,7 +103,7 @@ export default function Home() {
           priority
         />
       </div>
-      <VideoPlayer src="/Save_the_Date.mp4" title="Nuestra Historia de Amor" />
+      <VideoPlayer src="/Save_the_Date.mp4" title="Save the date" horientation="vertical" />
     </div>
   )
 }

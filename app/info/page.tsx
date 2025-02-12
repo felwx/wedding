@@ -13,10 +13,10 @@ export default function Info() {
           <p className="mb-2">
             <strong>Hora:</strong> 16:30 h
           </p>
-          <p>
-            <strong>Ceremonia:</strong> Iglesia del Tibidabo
+          <p className="mb-2">
+            <strong>Lugar:</strong> Iglesia del Tibidabo
           </p>
-          <p>
+          <p className="mb-2">
             <strong>Cómo llegar:</strong> Pondremos autobuses para el que lo desee. Si prefieres ir en coche, el
             Tibidabo dispone de parking
           </p>
@@ -41,8 +41,8 @@ export default function Info() {
           <p className="mb-2">
             <strong>Hora:</strong> 19:00 h
           </p>
-          <p>
-            <strong>Convite:</strong> Celler de Can Torrens
+          <p className="mb-2">
+            <strong>Lugar:</strong> Celler de Can Torrens
           </p>
           <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden">
             <iframe
@@ -59,12 +59,23 @@ export default function Info() {
         </section>
         <section className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Autobuses</h2>
-          <p className="mb-2">Hemos contratado un servicio de autobuses que saldrá desde esta ubicación</p>
-          <p>
-            Para tener plazas para todos por favor rellena el
-            <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
-              formulario de asistencia
+          <p className="mb-2">Hemos contratado un servicio de autobuses para todo el que quiera utilizarlo</p>
+          <p className="mb-2">
+            Para tener plazas para todos por favor rellena el <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
+            <strong>formulario de asistencia</strong>
             </Link>
+          </p>
+          <p className="mb-2">
+            <strong>Fecha:</strong> 05 de abril de 2025
+          </p>
+          <p className="mb-2">
+            <strong>Hora de salida:</strong> 15:45 h
+          </p>
+          <p className="mb-2">
+            <strong>Hora de regreso:</strong> Cuando acabe la fiesta...
+          </p>
+          <p className="mb-2">
+            <strong>Lugar de salida y regreso:</strong> Hotel Exe Parc Vallés
           </p>
           <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden">
             <iframe
