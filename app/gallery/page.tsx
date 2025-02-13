@@ -45,8 +45,8 @@ export default function Gallery() {
             <DialogContent className="max-w-3xl w-full bg-transparent border-none">
               <div className="relative aspect-square">
                 <Image
-                  src={images[currentImageIndex].src || "/placeholder.svg"}
-                  alt={images[currentImageIndex].alt}
+                  src={images[index+1].src || "/placeholder.svg"}
+                  alt={images[index+1].alt}
                   fill
                   className="object-contain"
                 />
