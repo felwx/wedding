@@ -38,15 +38,16 @@ export default function Gallery() {
         {images.map((image, index) => (
           <Dialog key={index}>
             <DialogTrigger asChild>
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+               onClick={() => setCurrentImageIndex(index)}>
                 <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
               </div>
             </DialogTrigger>
             <DialogContent className="max-w-3xl w-full bg-transparent border-none">
               <div className="relative aspect-square">
                 <Image
-                  src={images[index].src || "/placeholder.svg"}
-                  alt={images[index].alt}
+                  src={images[currentImageIndex].src || "/placeholder.svg"}
+                  alt={images[currentImageIndex].alt}
                   fill
                   className="object-contain"
                 />
