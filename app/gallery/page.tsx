@@ -15,9 +15,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 //   { src: "/galeria7.jpg", alt: "Couple 6" },
 // ]
 
-const images = Array.from({ length: 28 }, (_, i) => ({
+const images = Array.from({ length: 27 }, (_, i) => ({
   src: `/galeria/galeria${i + 1}.jpg`,
-  alt: `Couple ${i + 1}`,
+  alt: `Foto ${i + 1}`,
 }));
 
 export default function Gallery() {
