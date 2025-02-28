@@ -17,7 +17,7 @@ export default function OurHistory() {
             className="rounded-lg shadow-md"
           />
           <p className="text-lg">
-          Nuestra historia empieza en nuestro pueblo. En Alcalá de la Vega pasábamos veranos inolvidables y allí es donde nos conocimos siendo unos niños. Los años fueron pasando y aunque esos dos niños que solo se veían en verano, durante 15 días esa amistad siempre fue especial. Cada verano, al llegar al pueblo, los dos sentían los mismos nervios y se hacían las mismas preguntas. ¿Cuándo vendrá? ¿Se acordará de mí? ¿Tendrá ganas de verme?
+          Nuestra historia comienza en nuestro pueblo. En Alcalá de la Vega pasábamos veranos inolvidables y allí es donde nos conocimos siendo unos niños. Los años fueron pasando y, aunque esos dos niños que solo se veían en verano, durante 15 días esa amistad siempre fue especial. Cada verano, al llegar al pueblo, los dos sentían los mismos nervios y se hacían las mismas preguntas. ¿Cuándo vendrá? ¿Se acordará de mí? ¿Tendrá ganas de verme?
           </p>
         </div>
       </section>
@@ -33,7 +33,7 @@ export default function OurHistory() {
             className="rounded-lg shadow-md"
           />
           <p className="text-lg">
-          A pesar de solo vernos en verano, cada vez que nos volvíamos a encontrar es como si el tiempo no hubiese pasado. Cada vez nuestra relación era más fuerte y compartimos veranos increíbles juntos, pero la distancia y nuestra edad nos impedía seguir con nuestra relación después del verano. Al final llego el verano que cambio nuestras vidas, cuando menos lo esperábamos todo cambió para siempre. Con 20 y 19 años nos atrevimos a hacer la locura más grande del mundo y empezar nuestro camino juntos.
+          A pesar de solo vernos en verano, cuando nos volvíamos a encontrar era como si el tiempo no hubiese pasado. Cada vez nuestra relación era más fuerte y compartimos veranos increíbles juntos, pero la distancia y nuestra edad nos impedía seguir con nuestra relación después del verano. Al final llego el verano que cambio nuestras vidas, cuando menos lo esperábamos todo cambió para siempre. Con 20 y 19 años nos atrevimos a hacer la locura más grande del mundo y empezar nuestro camino juntos.
           </p>
         </div>
       </section>
