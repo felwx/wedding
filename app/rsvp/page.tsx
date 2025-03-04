@@ -8,131 +8,11 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { CheckCircle2, XCircle } from "lucide-react"
-import Select from "react-select"
-
-const guestNames = [
-  { value: "Adrián Gemelo Poleñino", label: "Adrián Gemelo Poleñino" },
-  { value: "Aida Ruíz Tortajada", label: "Aida Ruíz Tortajada" },
-  { value: "Ainhoa Bachata", label: "Ainhoa" },
-  { value: "Alba Poleñino", label: "Alba" },
-  { value: "Alba Viana", label: "Alba Viana" },
-  { value: "Alberto Nieto Navarro", label: "Alberto Nieto Navarro" },
-  { value: "Amelia Pérez Sánchez", label: "Amelia Pérez Sánchez" },
-  { value: "Amor Collado Morata", label: "Amor Collado Morata" },
-  { value: "Amparo", label: "Amparo" },
-  { value: "Ana", label: "Ana" },
-  { value: "Anabel", label: "Anabel" },
-  { value: "Angel Collado Morata", label: "Angel Collado Morata" },
-  { value: "Angel Luis", label: "Angel Luis" },
-  { value: "Ángeles", label: "Ángeles" },
-  { value: "Antonio Pérez Sánchez", label: "Antonio Pérez Sánchez" },
-  { value: "Antonia Ruiz", label: "Antonia Ruiz" },
-  { value: "Arantxa", label: "Arantxa" },
-  { value: "Belén Poleñino", label: "Belén Poleñino" },
-  { value: "Carlos", label: "Carlos" },
-  { value: "Carlos", label: "Carlos" },
-  { value: "Carles", label: "Carles" },
-  { value: "Carmen Poleñino", label: "Carmen Poleñino" },
-  { value: "César", label: "César" },
-  { value: "Clemen", label: "Clemen" },
-  { value: "Cristina", label: "Cristina" },
-  { value: "Cristina Poleñino", label: "Cristina Poleñino" },
-  { value: "Dani Poleñino", label: "Dani Poleñino" },
-  { value: "David Villellas Poleñino", label: "David Villellas Poleñino" },
-  { value: "Diego Gemelo Poleñino", label: "Diego Gemelo Poleñino" },
-  { value: "Durango Poleñino", label: "Durango Poleñino" },
-  { value: "Elliot", label: "Elliot" },
-  { value: "Emilio Ruiz", label: "Emilio Ruiz" },
-  { value: "Estela Poleñino", label: "Estela Poleñino" },
-  { value: "Esther", label: "Esther" },
-  { value: "Feliciano", label: "Feliciano" },
-  { value: "Félix", label: "Félix" },
-  { value: "Fran Poleñino", label: "Fran Poleñino" },
-  { value: "Fran", label: "Fran" },
-  { value: "Freya", label: "Freya" },
-  { value: "Gavalda", label: "Gavalda" },
-  { value: "Gema", label: "Gema" },
-  { value: "Gina", label: "Gina" },
-  { value: "Goyo Poleñino", label: "Goyo Poleñino" },
-  { value: "Iara Poleñino", label: "Iara Poleñino" },
-  { value: "Irena", label: "Irena" },
-  { value: "Irene", label: "Irene" },
-  { value: "Isidoro", label: "Isidoro" },
-  { value: "Javi", label: "Javi" },
-  { value: "Jordi", label: "Jordi" },
-  { value: "Jose", label: "Jose" },
-  { value: "Jose Angel", label: "Jose Angel" },
-  { value: "Juan Carlos", label: "Juan Carlos" },
-  { value: "Juan Carlos", label: "Juan Carlos" },
-  { value: "Juanma", label: "Juanma" },
-  { value: "Judith", label: "Judith" },
-  { value: "Judith Poleñino", label: "Judith Poleñino" },
-  { value: "Juli", label: "Juli" },
-  { value: "Laia", label: "Laia" },
-  { value: "Leo", label: "Leo" },
-  { value: "Lidia", label: "Lidia" },
-  { value: "Lidia Poleñino", label: "Lidia Poleñino" },
-  { value: "Loli", label: "Loli" },
-  { value: "Lorena Poleñino", label: "Lorena Poleñino" },
-  { value: "Lucas Poleñino", label: "Lucas Poleñino" },
-  { value: "Luis", label: "Luis" },
-  { value: "Marc", label: "Marc" },
-  { value: "Marcela", label: "Marcela" },
-  { value: "Marcos Poleñino", label: "Marcos Poleñino" },
-  { value: "María", label: "María" },
-  { value: "MariCarmen Poleñino", label: "MariCarmen Poleñino" },
-  { value: "Mariano Poleñino", label: "Mariano Poleñino" },
-  { value: "Marga", label: "Marga" },
-  { value: "Marta", label: "Marta" },
-  { value: "Marta", label: "Marta" },
-  { value: "Marta", label: "Marta" },
-  { value: "Maribel", label: "Maribel" },
-  { value: "Mª Luisa", label: "Mª Luisa" },
-  { value: "Miguel", label: "Miguel" },
-  { value: "Miquel", label: "Miquel" },
-  { value: "Miriam", label: "Miriam" },
-  { value: "Miriam", label: "Miriam" },
-  { value: "Mónica", label: "Mónica" },
-  { value: "Monchi", label: "Monchi" },
-  { value: "Multi", label: "Multi" },
-  { value: "Nacho", label: "Nacho" },
-  { value: "Natalia", label: "Natalia" },
-  { value: "Néstor", label: "Néstor" },
-  { value: "Nelson", label: "Nelson" },
-  { value: "Oscar", label: "Oscar" },
-  { value: "Paco", label: "Paco" },
-  { value: "Pau", label: "Pau" },
-  { value: "Patri", label: "Patri" },
-  { value: "Pedro Poleñino", label: "Pedro Poleñino" },
-  { value: "Pere", label: "Pere" },
-  { value: "Pilar", label: "Pilar" },
-  { value: "Piquero", label: "Piquero" },
-  { value: "Paula", label: "Paula" },
-  { value: "Paula Dani", label: "Paula Dani" },
-  { value: "Raquel", label: "Raquel" },
-  { value: "Raquel", label: "Raquel" },
-  { value: "Rocho", label: "Rocho" },
-  { value: "Rosabel", label: "Rosabel" },
-  { value: "Rosa", label: "Rosa" },
-  { value: "Sandra", label: "Sandra" },
-  { value: "Sandra", label: "Sandra" },
-  { value: "Santi", label: "Santi" },
-  { value: "Sara", label: "Sara" },
-  { value: "Sara Oto", label: "Sara Oto" },
-  { value: "Sergio", label: "Sergio" },
-  { value: "Sergio", label: "Sergio" },
-  { value: "Sergio", label: "Sergio" },
-  { value: "Siscu", label: "Siscu" },
-  { value: "Tía Gregoria", label: "Tía Gregoria" },
-  { value: "Tío Pedro", label: "Tío Pedro" },
-  { value: "Toni", label: "Toni" },
-  { value: "Turco", label: "Turco" },
-  { value: "Turri", label: "Turri" },
-]
+import Image from "next/image"
 
 interface FormData {
   name: string
-  email: string
+  phone: string
   attending: string
   guests: string
   dietaryRestrictions: string
@@ -146,7 +26,14 @@ export default function RSVP() {
   const [formData, setFormData] = useState<FormData | null>(null)
   const [showForm, setShowForm] = useState(true)
   const [isSending, setIsSending] = useState(false)
-
+  const [step, setStep] = useState(1);
+  const [formName, setFormName] = useState("");
+  const [formPhone, setFormPhone] = useState("");
+  const [formAttending, setFormAttending] = useState("");
+  const [formRestrictions, setFormRestrictions] = useState("");
+  const [formBus, setFormBus] = useState("");
+  const nextStep = () => setStep((prev) => prev + 1);
+  const prevStep = () => setStep((prev) => prev - 1);
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setIsSending(true)
@@ -157,12 +44,12 @@ export default function RSVP() {
     const formElement = event.currentTarget
     const formData = new FormData(formElement)
     const data = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      attending: formData.get("attending") as string,
-      guests: formData.get("guests") as string,
-      dietaryRestrictions: formData.get("dietaryRestrictions") as string,
-      useBusService: formData.get("useBusService") as string,
+      name: formName as string,
+      email: formPhone as string,
+      attending: formAttending as string,
+      guests: "1",
+      dietaryRestrictions: formRestrictions as string,
+      useBusService: formBus as string,
     }
 
     try {
@@ -172,7 +59,7 @@ export default function RSVP() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
-      console.log("Datos enviados correctamente")
+      console.log("Datos enviados correctamente",data)
       setIsSubmitted(true)
       setFormData(data)
       setSelectedName(null)
@@ -190,6 +77,12 @@ export default function RSVP() {
     setFormData(null)
     setSelectedName(null)
     setShowForm(true)
+    setStep(1)
+    setFormName("")
+    setFormPhone("")
+    setFormAttending("")
+    setFormBus("")
+    setFormRestrictions("")
   }
 
   return (
@@ -205,7 +98,7 @@ export default function RSVP() {
                 <strong>Nombre:</strong> {formData.name}
               </p>
               <p>
-                <strong>Email:</strong> {formData.email}
+                <strong>Teléfono:</strong> {formData.phone}
               </p>
               <p>
                 <strong>Asistencia:</strong> {formData.attending === "yes" ? "Sí" : "No"}
@@ -243,69 +136,97 @@ export default function RSVP() {
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
-          <div>
-            <Label htmlFor="name" className="text-base sm:text-lg">
-              Nombre
-            </Label>
-            <Input id="name" name="name" type="text" required className="mt-1" />
-          </div>
-          <div>
-            <Label htmlFor="email" className="text-base sm:text-lg">
-              Email
-            </Label>
-            <Input id="email" name="email" type="email" required className="mt-1" />
-          </div>
-          <div>
-            <Label className="text-base sm:text-lg">¿Asistirás?</Label>
-            <RadioGroup name="attending" className="flex space-x-4 mt-2">
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="yes" id="attending-yes" />
-                <Label htmlFor="attending-yes">Sí</Label>
+          {step === 1 && (<div>
+            <div className="flex flex-col items-center">
+              <Image
+                  src="/historia1.jpg"
+                  alt="Sandra y Félix"
+                  width={300}
+                  height={200}
+                  className="rounded-lg shadow-md"
+                />
+            </div>
+            <div>
+              <Label htmlFor="name" className="text-base sm:text-lg">
+                Primero dinos como te llamas
+              </Label>
+              <Input id="name" name="name" type="text" required className="mt-1" value={formName} onChange={(e) => setFormName(e.target.value)}/>
+            </div>
+            <div>
+              <Label htmlFor="phone" className="text-base sm:text-lg">
+                Teléfono
+              </Label>
+              <Input id="phone" name="phone" type="phone" required className="mt-1"  value={formPhone} onChange={(e) => setFormPhone(e.target.value)}/>
+            </div>
+            <div className="flex gap-4 mt-4">
+              <Button onClick={nextStep} className={`w-full`}>Siguiente</Button>
+            </div>
+          </div>)}
+          {step === 2 && (<div>
+            <div>
+              <Label className="text-base sm:text-lg">Asistencia, ¿confirmas que vendrás a la boda?</Label>
+              <RadioGroup name="attending" className="flex space-x-4 mt-2" value={formAttending}>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="yes" id="attending-yes" onClick={(e) => {setFormAttending("yes")}}/>
+                  <Label htmlFor="attending-yes">Sí, por supuesto.</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="no" id="attending-no" onClick={(e) => setFormAttending("no")}/>
+                  <Label htmlFor="attending-no">Me encantaría pero no puedo</Label>
+                </div>
+              </RadioGroup>
+              <div className="flex gap-4 mt-4">
+                <Button onClick={prevStep} className={`w-full`}>Atrás</Button>
+                <Button onClick={nextStep} className={`w-full`}>Siguiente</Button>
               </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="no" id="attending-no" />
-                <Label htmlFor="attending-no">No</Label>
-              </div>
-            </RadioGroup>
-          </div>
-          <div>
-            <Label htmlFor="guests" className="text-base sm:text-lg">
-              Número de invitados (incluyéndote)
-            </Label>
-            <Input id="guests" name="guests" type="number" min="1" max="5" required className="mt-1" />
-          </div>
-          <div>
-            <Label htmlFor="dietaryRestrictions" className="text-base sm:text-lg">
-              Restricciones alimentarias
-            </Label>
-            <Textarea id="dietaryRestrictions" name="dietaryRestrictions" className="mt-1" />
-          </div>
-          <div>
-            <Label className="text-base sm:text-lg">¿Utilizarás el servicio de autobús?</Label>
-            <RadioGroup name="useBusService" className="flex space-x-4 mt-2">
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="yes" id="bus-yes" />
-                <Label htmlFor="bus-yes">Sí</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="no" id="bus-no" />
-                <Label htmlFor="bus-no">No</Label>
-              </div>
-            </RadioGroup>
-          </div>
-          <Button type="submit" className={`w-full ${
-            isSending ? "opacity-50 cursor-not-allowed" : ""}`} 
-            disabled={isSending}>
-            {isSending ? (
-              <img
-                src="https://media.tenor.com/On7kvXhzml4AAAAi/loading.gif"
-                alt="Cargando..."
-                className="w-6 h-6"
-              />
-            ) : (
-              "Enviar"
-            )}
-          </Button>
+            </div>
+          </div>)}
+          {step === 3 && (<div>
+            <div>
+              <Label className="text-base sm:text-lg">Transporte, ¿cómo has pensado llegar? Te recordamos: Iglesia Tibidabo, banquete Celler de Can Torrens en Sant Fost de Campsentelles. Importante: pondremos a disposición un único horario de regreso al final de la fiesta de madrugada sobre 4:30h am</Label>
+              <RadioGroup name="useBusService" className="flex space-x-4 mt-2" value={formBus}>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="yes" id="bus-yes" onClick={(e) => {setFormBus("yes")}}/>
+                  <Label htmlFor="bus-yes">Voy por mi cuenta</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="no" id="bus-no" onClick={(e) => {setFormBus("no")}}/>
+                  <Label htmlFor="bus-no">Quiero ir en bus
+                  </Label>
+                </div>
+              </RadioGroup>
+            </div>
+            <div className="flex gap-4 mt-4">
+              <Button onClick={prevStep} className={`w-full`}>Atrás</Button>
+              <Button onClick={nextStep} className={`w-full`}>Siguiente</Button>
+            </div>
+          </div>)}
+          {step === 4 && (<div>
+            <div>
+              <Label htmlFor="dietaryRestrictions" className="text-base sm:text-lg">
+                Restricciones alimentarias
+              </Label>
+              <Textarea id="dietaryRestrictions" name="dietaryRestrictions" className="mt-1" onChange={(e) => setFormRestrictions(e.target.value)}/>
+            </div>
+            <div className="flex gap-4 mt-4">
+              <Button onClick={prevStep} className={`w-full`}>Atrás</Button>
+            </div>
+            <div className="flex gap-4 mt-4">
+              <Button type="submit" className={`w-full ${
+                isSending ? "opacity-50 cursor-not-allowed" : ""}`} 
+                disabled={isSending}>
+                {isSending ? (
+                  <img
+                    src="https://media.tenor.com/On7kvXhzml4AAAAi/loading.gif"
+                    alt="Cargando..."
+                    className="w-6 h-6"
+                  />
+                ) : (
+                  "Enviar"
+                )}
+              </Button>
+            </div>
+          </div>)}
         </form>
       )}
     </div>
