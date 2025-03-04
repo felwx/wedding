@@ -33,12 +33,12 @@ export default function RootLayout({
           <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
             <div>
               <h3 className="font-serif text-xl mb-2 text-primary">Contáctanos</h3>
-              <p>Email: sandra.felix@wedding.com</p>
-              <p>Teléfono: (123) 456-7890</p>
+              <p>Email: fepecol@gmail.com</p>
+              <p>Teléfono: 600 833 734</p>
             </div>
             <div>
               <h3 className="font-serif text-xl mb-2 text-primary">Ceremonia</h3>
-              <p>Iglesia del Tibidabo</p>
+              <p>Templo del Sagrado Corazón de Jesús (Tibidabo)</p>
               <p>Ctra. de Vallvidrera al Tibidabo, 111</p>
               <p>Sarrià-Sant Gervasi, 08035 Barcelona</p>
             </div>

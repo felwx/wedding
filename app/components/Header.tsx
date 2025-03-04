@@ -66,9 +66,9 @@ export function Header() {
           <Link href="/info" className="menu-item">
             Información
           </Link>
-          <Link href="/gallery" className="menu-item">
+          {/* <Link href="/gallery" className="menu-item">
             Galería
-          </Link>
+          </Link> */}
           <Link href="/rsvp" className="menu-item">
             Asistencia
           </Link>
@@ -117,9 +117,9 @@ function MobileMenu({
           <Link href="/info" className="menu-item text-xl" onClick={closeMenu}>
             Información
           </Link>
-          <Link href="/gallery" className="menu-item text-xl" onClick={closeMenu}>
+          {/* <Link href="/gallery" className="menu-item text-xl" onClick={closeMenu}>
             Galería
-          </Link>
+          </Link> */}
           <Link href="/rsvp" className="menu-item text-xl" onClick={closeMenu}>
             Asistencia
           </Link>

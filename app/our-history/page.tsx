@@ -17,7 +17,9 @@ export default function OurHistory() {
             className="rounded-lg shadow-md"
           />
           <p className="text-lg">
-          Nuestra historia comienza en nuestro pueblo. En Alcalá de la Vega pasábamos veranos inolvidables y allí es donde nos conocimos siendo unos niños. Los años fueron pasando y, aunque esos dos niños que solo se veían en verano, durante 15 días esa amistad siempre fue especial. Cada verano, al llegar al pueblo, los dos sentían los mismos nervios y se hacían las mismas preguntas. ¿Cuándo vendrá? ¿Se acordará de mí? ¿Tendrá ganas de verme?
+          Nuestra historia comienza en nuestro pueblo. En Alcalá de la Vega pasábamos veranos inolvidables y allí es donde nos conocimos siendo unos niños.
+          <br/>Los años fueron pasando y, aunque esos dos niños que solo se veían en verano, durante 15 días esa amistad siempre fue especial.
+          <br/>Cada verano, al llegar al pueblo, los dos sentían los mismos nervios y se hacían las mismas preguntas. ¿Cuándo vendrá? ¿Se acordará de mí? ¿Tendrá ganas de verme?
           </p>
         </div>
       </section>
@@ -33,7 +35,10 @@ export default function OurHistory() {
             className="rounded-lg shadow-md"
           />
           <p className="text-lg">
-          A pesar de solo vernos en verano, cuando nos volvíamos a encontrar era como si el tiempo no hubiese pasado. Cada vez nuestra relación era más fuerte y compartimos veranos increíbles juntos, pero la distancia y nuestra edad nos impedía seguir con nuestra relación después del verano. Al final llego el verano que cambio nuestras vidas, cuando menos lo esperábamos todo cambió para siempre. Con 20 y 19 años nos atrevimos a hacer la locura más grande del mundo y empezar nuestro camino juntos.
+          A pesar de solo vernos en verano, cuando nos volvíamos a encontrar era como si el tiempo no hubiese pasado.
+          <br/>Cada vez nuestra relación era más fuerte y compartimos veranos increíbles juntos, pero la distancia y nuestra edad nos impedía seguir con nuestra relación después del verano. 
+          <br/>Al final llego el verano que cambio nuestras vidas, cuando menos lo esperábamos todo cambió para siempre. 
+          <br/>Con 20 y 19 años nos atrevimos a hacer la locura más grande del mundo y empezar nuestro camino juntos.
           </p>
         </div>
       </section>
@@ -49,7 +54,11 @@ export default function OurHistory() {
             className="rounded-lg shadow-md"
           />
           <p className="text-lg">
-          Nuestra relación empezó siendo una relación a distancia, con infinidad de viajes entre Barcelona y Valencia. Para casi todo el mundo tener una relación así habría sido imposible, pero para nosotros fue lo más bonito de nuestra vida. Miles de horas de videollamadas, hablando cada noche de todo lo que habíamos hecho ese día y muriéndonos de ganas de volver a estar juntos. Siempre esperando a que llegase el finde semana que nos veríamos y disfrutar al máximo cada segundo juntos. Así pasamos nuestros primeros 4 años, unidos en la distancia. Después de todo este tiempo porfía llegó el día en que nos fuimos a vivir juntos, y de eso han pasado ya más de 7 años.
+          Nuestra relación empezó siendo una relación a distancia, con infinidad de viajes entre Barcelona y Valencia. 
+          <br/>Para casi todo el mundo tener una relación así habría sido imposible, pero para nosotros fue lo más bonito de nuestra vida. 
+          Miles de horas de videollamadas, hablando cada noche de todo lo que habíamos hecho ese día y muriéndonos de ganas de volver a estar juntos. 
+          Siempre esperando a que llegase el finde semana que nos veríamos y disfrutar al máximo cada segundo juntos. 
+          <br/>Así pasamos nuestros primeros 4 años, unidos en la distancia. Después de todo este tiempo porfía llegó el día en que nos fuimos a vivir juntos, y de eso han pasado ya más de 7 años.
           </p>
         </div>
       </section>
