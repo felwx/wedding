@@ -92,7 +92,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <h2 className="elegant-heading text-2xl sm:text-3xl mb-4">Acompáñanos a celebrar nuestra unión</h2>
+      {/* <h2 className="elegant-heading text-2xl sm:text-3xl mb-4">Acompáñanos a celebrar nuestra unión</h2>
       <div className="mb-8">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.logo_boda_Fe%CC%81lix&Sandra_nombre_2-dCl6kZeVtV2Ud3yXCSie9C9vSRPZ83.png"
@@ -102,7 +102,7 @@ export default function Home() {
           className="mx-auto"
           priority
         />
-      </div>
+      </div> */}
       <VideoPlayer src="/Save_the_Date.mp4" title="Save the date" horientation="vertical" />
     </div>
   )
