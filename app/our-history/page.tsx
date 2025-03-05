@@ -36,8 +36,8 @@ export default function OurHistory() {
           />
           <p className="text-lg">
           A pesar de solo vernos en verano, cuando nos volvíamos a encontrar era como si el tiempo no hubiese pasado.
-          <br/>Cada vez nuestra relación era más fuerte y compartimos veranos increíbles juntos, pero la distancia y nuestra edad nos impedía seguir con nuestra relación después del verano. 
-          <br/>Al final llego el verano que cambio nuestras vidas, cuando menos lo esperábamos todo cambió para siempre. 
+          <br/>Cada vez nuestra relación era más fuerte y compartimos veranos increíbles juntos, pero la distancia y nuestra edad nos impedían seguir con nuestra relación después del verano. 
+          <br/>Al final llegó el verano que cambió nuestras vidas. Cuando menos lo esperábamos, todo cambió para siempre. 
           <br/>Con 20 y 19 años nos atrevimos a hacer la locura más grande del mundo y empezar nuestro camino juntos.
           </p>
         </div>
@@ -57,8 +57,8 @@ export default function OurHistory() {
           Nuestra relación empezó siendo una relación a distancia, con infinidad de viajes entre Barcelona y Valencia. 
           <br/>Para casi todo el mundo tener una relación así habría sido imposible, pero para nosotros fue lo más bonito de nuestra vida. 
           Miles de horas de videollamadas, hablando cada noche de todo lo que habíamos hecho ese día y muriéndonos de ganas de volver a estar juntos. 
-          Siempre esperando a que llegase el finde semana que nos veríamos y disfrutar al máximo cada segundo juntos. 
-          <br/>Así pasamos nuestros primeros 4 años, unidos en la distancia. Después de todo este tiempo porfía llegó el día en que nos fuimos a vivir juntos, y de eso han pasado ya más de 7 años.
+          Siempre esperando a que llegase el finde semana que nos veríamos y disfrutaríamos al máximo cada segundo juntos. 
+          <br/>Así pasamos nuestros primeros 4 años, unidos en la distancia. Después de todo este tiempo, al fin llegó el día en que nos fuimos a vivir juntos, y de eso han pasado ya más de 7 años.
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ export default function OurHistory() {
         <h2 className="elegant-heading text-2xl sm:text-3xl mb-4 center">La pedida</h2>
         <div className="flex flex-col items-center gap-4">
           <p className="text-lg text-center max-w-2xl">
-          En nuestro pueblo nos conocimos, allí empezamos este bonito camino juntos, después de 10 años y muchas aventuras compartidas, en Alcalá dimos el siguiente paso en nuestro camino. En la noche en la que celebramos nuestro décimo aniversario juntos ocurrió algo inesperado…
+          En nuestro pueblo nos conocimos, allí empezamos este bonito camino juntos. Después de 10 años y muchas aventuras compartidas, en Alcalá dimos el siguiente paso en nuestro camino. En la noche en la que celebramos nuestro décimo aniversario juntos, ocurrió algo inesperado…
           </p>
           <VideoPlayer src="/pedida.mp4"/>
         </div>
@@ -91,4 +91,3 @@ export default function OurHistory() {
     </div>
   )
 }
-
