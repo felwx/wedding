@@ -4,6 +4,15 @@ export default function Info() {
   return (
     <div className="content-wrapper">
       <h1 className="elegant-heading text-3xl sm:text-4xl mb-6 md:mb-8 text-center">Información de la boda</h1>
+      <p className="mb-2">
+        La ceremonia se celebrará en la iglesia del Templo del Sagrado Corazón de Jesús, en el Tibidabo. Para llegar hasta allí puedes ir con tu coche propio si lo deseas, o <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
+        <strong>reservar plaza</strong>
+        </Link> en los autobuses que pondremos a tu disposición.
+      </p>
+      <p className="mb-2">
+        Si decides venir en autobús solo te has de preocupar de decirnoslos <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
+        <strong>rellenando el formulario</strong> y estar a la hora de salida. Si prefieres venir por tu cuenta el parking del tibidabo es tu mejor opción para llegar a la ceremonia.
+      </p>
       <div className="space-y-6 md:space-y-8">
         <section className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Ceremonia</h2>
@@ -14,7 +23,7 @@ export default function Info() {
             <strong>Hora:</strong> 16:30 h
           </p>
           <p className="mb-2">
-            <strong>Lugar:</strong> Iglesia del Tibidabo
+            <strong>Lugar:</strong> Templo del Sagrado Corazón de Jesús, Ctra. de Vallvidrera al Tibidabo, 111, Distrito de Sarrià-Sant Gervasi, 08035 Barcelona
           </p>
           <p className="mb-2">
             <strong>Cómo llegar:</strong> Pondremos autobuses para el que lo desee. Si prefieres ir en coche, el
@@ -36,13 +45,16 @@ export default function Info() {
         <section className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Banquete</h2>
           <p className="mb-2">
+            Después de la ceremonia nos dirigiremos al Celler de Can Torrens para continuar allí con la fiesta.
+          </p>
+          <p className="mb-2">
             <strong>Fecha:</strong> 05 de abril de 2025
           </p>
           <p className="mb-2">
             <strong>Hora:</strong> 19:00 h
           </p>
           <p className="mb-2">
-            <strong>Lugar:</strong> Celler de Can Torrens
+            <strong>Lugar:</strong> El Celler de Can Torrens, Pl. de les Glòries Catalanes, 3, 08105 Sant Fost de Campsentelles, Barcelona
           </p>
           <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden">
             <iframe
@@ -75,7 +87,7 @@ export default function Info() {
             <strong>Hora de regreso:</strong> Cuando acabe la fiesta...
           </p>
           <p className="mb-2">
-            <strong>Lugar de salida y regreso:</strong> Hotel Exe Parc Vallés
+            <strong>Lugar de salida y regreso:</strong> Hotel Exe Parc del Vallès, Carrer dels Artesans, 8, 08290 Cerdanyola del Vallès, Barcelona
           </p>
           <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden">
             <iframe
