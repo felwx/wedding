@@ -4,17 +4,27 @@ export default function Info() {
   return (
     <div className="content-wrapper">
       <h1 className="elegant-heading text-3xl sm:text-4xl mb-6 md:mb-8 text-center">Información de la boda</h1>
-      <p className="mb-2">
-        La ceremonia se celebrará en la iglesia del Templo del Sagrado Corazón de Jesús, en el Tibidabo. Para llegar hasta allí puedes ir con tu coche propio si lo deseas, o <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
-        <strong>reservar plaza</strong>
-        </Link> en los autobuses que pondremos a tu disposición.
-      </p>
-      <p className="mb-2">
-        Si decides venir en autobús solo te has de preocupar de decirnoslos <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
-        <strong>rellenando el formulario</strong> y estar a la hora de salida. Si prefieres venir por tu cuenta el parking del tibidabo es tu mejor opción para llegar a la ceremonia.
-      </p>
       <div className="space-y-6 md:space-y-8">
         <section className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+          <p className="mb-2">
+            La ceremonia se celebrará en la iglesia del <strong>Templo del Sagrado Corazón de Jesús</strong>, en el Tibidabo. Para llegar hasta allí puedes ir con tu coche propio si lo deseas, o <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
+              <strong>reservar plaza</strong></Link> en los autobuses que pondremos a tu disposición.
+          </p>
+          <p className="mb-2">
+            Si decides venir en autobús, solo te has de preocupar de decírnoslos <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
+              <strong>rellenando el formulario</strong></Link> y estar a la hora de salida, las 15:30 h en el Hotel Exe Parc del Vallès, Carrer dels Artesans, 8, 08290 Cerdanyola del Vallès, Barcelona.
+          </p>
+          <p className="mb-2">Si prefieres venir por tu cuenta el parking del tibidabo es tu mejor opción para llegar a la ceremonia. </p>
+          <p>Aquí tienes toda la información que necesitas</p>
+          <p><Link href="#autobuses"><strong>Autobuses</strong></Link></p>
+          <p><Link href="#ceremonia"><strong>Ceremonia</strong></Link></p>
+          <p><Link href="#banquete"><strong>Banquete</strong></Link></p>
+          <p><Link href="#parking"><strong>Parquing Tibidabo</strong></Link></p>
+          
+        </section>
+      </div>
+      <div className="space-y-6 md:space-y-8">
+        <section id="ceremonia" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Ceremonia</h2>
           <p className="mb-2">
             <strong>Fecha:</strong> 05 de abril de 2025
@@ -42,7 +52,28 @@ export default function Info() {
             />
           </div>
         </section>
-        <section className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+        <section id="parking" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+          <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Parking Tibidabo</h2>
+          <p className="mb-2">
+            Si vienes en coche el Tibidabo dispone de parking, es el único lugar donde podrás aparcar. 
+          </p>
+          <p className="mb-2">
+            <strong>Lugar:</strong> Parking Parque de atracciones Tibidabo
+          </p>
+          <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d998.4170375172664!2d2.1186356333087693!3d41.420326548636076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498270e7c2ebb%3A0x85fba71bcec41a5!2sParking%20Parque%20de%20atracciones%20Tibidabo!5e0!3m2!1ses!2ses!4v1741272678637!5m2!1ses!2ses"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg"
+            />
+          </div>
+        </section>
+        <section id="banquete" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Banquete</h2>
           <p className="mb-2">
             Después de la ceremonia nos dirigiremos al Celler de Can Torrens para continuar allí con la fiesta.
@@ -69,12 +100,12 @@ export default function Info() {
             />
           </div>
         </section>
-        <section className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+        <section id="autobuses" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Autobuses</h2>
           <p className="mb-2">Hemos contratado un servicio de autobuses para todo el que quiera utilizarlo</p>
           <p className="mb-2">
             Para tener plazas para todos por favor rellena el <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
-            <strong>formulario de asistencia</strong>
+              <strong>formulario de asistencia</strong>
             </Link>
           </p>
           <p className="mb-2">
@@ -106,4 +137,3 @@ export default function Info() {
     </div>
   )
 }
-
