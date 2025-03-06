@@ -1,13 +1,19 @@
+"use client"
+
+import { useState } from "react";
 import Link from "next/link"
 
-const sections = [
-  { href: "#autobuses", title: "Autobuses" },
-  { href: "#ceremonia", title: "Ceremonia" },
-  { href: "#banquete", title: "Banquete" },
-  { href: "#parking", title: "Parquing" },
-];
-
 export default function Info() {
+  const sections = [
+    { id: 1, title: "Ceremonia" },
+    { id: 2, title: "Parquing Tibidabo" },
+    { id: 3, title: "Banquete" },
+    { id: 4, title: "Autobuses" },
+    { id: 5, title: "Hotel" },
+    { id: 6, title: "Bares" }
+  ];
+  const [showSection, setShowSection] = useState(1);
+  
   return (
     <div className="content-wrapper">
       <h1 className="elegant-heading text-3xl sm:text-4xl mb-6 md:mb-8 text-center">Información de la boda</h1>
@@ -23,19 +29,26 @@ export default function Info() {
           </p>
           <p className="mb-2">Si prefieres venir por tu cuenta el parking del tibidabo es tu mejor opción para llegar a la ceremonia. </p>
           <p>Aquí tienes toda la información que necesitas</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center p-4">
+          <div className="flex flex-wrap justify-center gap-4 p-4 w-full max-w-screen-lg mx-auto">
             {sections.map((section) => (
-              <Link key={section.href} href={section.href}>
-                <div className="bg-white shadow-lg rounded-2xl p-6 text-center w-40 hover:bg-gray-100 transition">
-                  <strong>{section.title}</strong>
-                </div>
-              </Link>
+              // <Link key={section.href} href={section.href}>
+              //   <div className="bg-white shadow-lg rounded-2xl p-6 text-center w-40 hover:bg-gray-100 transition">
+              //     <strong>{section.title}</strong>
+              //   </div>
+              // </Link>
+              <button
+              key={section.id}
+              onClick={() => setShowSection(section.id)}
+              className="bg-white shadow-lg rounded-2xl p-6 text-center w-40 sm:w-48 md:w-56 lg:w-60 hover:bg-gray-100 transition"
+            >
+              <strong>{section.title}</strong>
+            </button>
             ))}
           </div>
         </section>
       </div>
       <div className="space-y-6 md:space-y-8">
-        <section id="ceremonia" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+        {showSection === 1 && (<section id="ceremonia" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Ceremonia</h2>
           <p className="mb-2">
             <strong>Fecha:</strong> 05 de abril de 2025
@@ -62,8 +75,8 @@ export default function Info() {
               className="rounded-lg"
             />
           </div>
-        </section>
-        <section id="parking" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+        </section>)}
+        {showSection === 2 && (<section id="parking" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Parking Tibidabo</h2>
           <p className="mb-2">
             Si vienes en coche el Tibidabo dispone de parking, es el único lugar donde podrás aparcar. 
@@ -83,8 +96,8 @@ export default function Info() {
               className="rounded-lg"
             />
           </div>
-        </section>
-        <section id="banquete" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+        </section>)}
+        {showSection === 3 && (<section id="banquete" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Banquete</h2>
           <p className="mb-2">
             Después de la ceremonia nos dirigiremos al Celler de Can Torrens para continuar allí con la fiesta.
@@ -110,8 +123,8 @@ export default function Info() {
               className="rounded-lg"
             />
           </div>
-        </section>
-        <section id="autobuses" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+        </section>)}
+        {showSection === 4 && (<section id="autobuses" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Autobuses</h2>
           <p className="mb-2">Hemos contratado un servicio de autobuses para todo el que quiera utilizarlo</p>
           <p className="mb-2">
@@ -143,7 +156,51 @@ export default function Info() {
               className="rounded-lg"
             />
           </div>
-        </section>
+        </section>)}
+        {showSection === 5 && (<section id="hotel" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+          <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Hotel</h2>
+          <p className="mb-2">Esta es la ubicación del hotel donde estais alojados. El autobús saldrá desde este punto a las 15:45 h</p>
+          <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5026.489379567399!2d2.1270257002544555!3d41.48761903565177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4966cafaede53%3A0xd0088935cd7bc35e!2sHotel%20Exe%20Parc%20del%20Vall%C3%A8s!5e0!3m2!1ses!2ses!4v1738765639778!5m2!1ses!2ses"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg"
+            />
+          </div>
+        </section>)}
+        {showSection === 6 && (<section id="bares" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
+          <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Bares</h2>
+          <p className="mb-2">Muy cerca del hotel está la calle Sant Ramon, donde encontrareis todos los bares que necesitais.</p>
+          <p className="mb-2">
+            <strong>Cafeterias:</strong> El informal, Granier...
+          </p>
+          <p className="mb-2">
+            <strong>Bares donde tomar una cerveza fresquita:</strong> Nuestro bar favorito es "La pizarrita de Juanlu", donde con cada cerveza se acompañana con las mejores tapas.
+          </p>
+          <p className="mb-2">
+            <strong>Bares de Tapas:</strong>Ca L'enric, Chumi, Od bar bodega, Tempo di vino, Cal Pintxo...
+          </p>
+          <p className="mb-2">
+            <strong>Restaurante:</strong> Od Bar, Tocat de l'Olla...
+          </p>
+          <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4226.5557405867885!2d2.132616761782012!3d41.490702397239566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbares%20cerca%20carrer%20sant%20ramon!5e0!3m2!1ses!2ses!4v1741284675186!5m2!1ses!2ses"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg"
+            />
+          </div>
+        </section>)}
       </div>
     </div>
   )

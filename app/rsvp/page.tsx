@@ -68,6 +68,7 @@ export default function RSVP() {
       setFormData(data)
       setSelectedName(null)
       setShowForm(false)
+      setStep(6)
       formElement.reset()
     } catch (error) {
       console.error("Error submitting form:", error)
@@ -93,53 +94,6 @@ export default function RSVP() {
   return (
     <div className="content-wrapper">
       <h1 className="elegant-heading text-3xl sm:text-4xl mb-6 md:mb-8 text-center">Confirma tu asistencia</h1>
-      {isSubmitted && formData && !showForm ? (
-        <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 space-y-4 min-h-[600px] flex flex-col justify-between">
-          <div className="flex flex-col items-center">
-              <Image
-                  src="/formulario1.jpg"
-                  alt="Sandra y Félix"
-                  width={300}
-                  height={200}
-                  className="rounded-lg shadow-md form-img"
-                />
-            </div>
-          <div>
-            <CheckCircle2 className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h2 className="text-2xl font-serif text-primary mb-4 text-center">¡Gracias por confirmar tu asistencia!</h2>
-            <div className="text-left max-w-md mx-auto">
-              <p>
-                <strong>Nombre:</strong> {formName}
-              </p>
-              <p>
-                <strong>Teléfono:</strong> {formPhone}
-              </p>
-              <p>
-                <strong>Asistencia:</strong> {formAttending === "yes" ? "Sí" : "No"}
-              </p>
-              {formRestrictions && (
-                <p>
-                  <strong>Restricciones alimentarias:</strong> {formRestrictions}
-                </p>
-              )}
-              {formMusic && (<p>
-                <strong>Te buscaremos cuando suene esta canción:</strong> {formMusic}
-              </p>)}
-              <p>
-                <strong>Utilizarás autobús:</strong> {formBus === "yes" ? "Sí" : "No"}
-              </p>
-            </div>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-muted-foreground mb-4">
-              Si necesitas hacer cambios, por favor contáctanos directamente.
-            </p>
-            <Button onClick={resetForm} className="w-full max-w-xs">
-              Enviar otra respuesta
-            </Button>
-          </div>
-        </div>
-      ) : (
         <form
           onSubmit={handleSubmit}
           className="space-y-6 max-w-md mx-auto bg-card p-4 sm:p-6 md:p-8 rounded-lg shadow-md min-h-[600px]"
@@ -170,7 +124,7 @@ export default function RSVP() {
               <Label htmlFor="phone" className="text-base sm:text-lg">
                 y tu teléfono
               </Label>
-              <Input id="phone" name="phone" placeholder="Tu teléfono" type="phone" required className="mt-1"  value={formPhone} onChange={(e) => setFormPhone(e.target.value)}/>
+              <Input id="phone" name="phone" placeholder="Tu teléfono" type="phone" required className="mt-1" value={formPhone} onChange={(e) => setFormPhone(e.target.value)}/>
             </div>
             <div className="form-button flex gap-4 mt-4 z">
               <Button onClick={nextStep} disabled={formName == "" ? true:false} className={`w-full`} >Siguiente</Button>
@@ -200,7 +154,23 @@ export default function RSVP() {
               </RadioGroup>
               <div className="flex gap-4 mt-4">
                 <Button onClick={prevStep} className={`w-full`}>Atrás</Button>
-                <Button onClick={nextStep} disabled={formAttending == "" ? true:false} className={`w-full`}>Siguiente</Button>
+                {formAttending !== "no" ? (
+                  <Button onClick={nextStep} disabled={formAttending == "" ? true:false} className={`w-full`}>Siguiente</Button>
+                ):(
+                  <Button type="submit" className={`w-full ${
+                      isSending ? "opacity-50 cursor-not-allowed" : ""}`} 
+                      disabled={isSending || formMusic !== "" ? true:false} >
+                      {isSending ? (
+                        <img
+                          src="https://media.tenor.com/On7kvXhzml4AAAAi/loading.gif"
+                          alt="Cargando..."
+                          className="w-6 h-6"
+                        />
+                      ) : (
+                        "Enviar"
+                      )}
+                  </Button>
+                )}
               </div>
             </div>
           </div>)}
@@ -219,14 +189,14 @@ export default function RSVP() {
                 <br/><i>Te recordamos: Iglesia Tibidabo, banquete Celler de Can Torrens en Sant Fost de Campsentelles.</i>
                 <br/><i>Importante: pondremos a disposición un único horario de regreso al final de la fiesta de madrugada sobre 4:30h am</i></Label>
               <RadioGroup name="useBusService" className="form-radio" value={formBus}>
-                <div className="items-center space-x-2">
-                  <RadioGroupItem value="no" id="bus-yes" onClick={(e) => {setFormBus("no")}}/>
-                  <Label htmlFor="bus-yes">Voy por mi cuenta</Label>
-                </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="yes" id="bus-no" onClick={(e) => {setFormBus("yes")}}/>
                   <Label htmlFor="bus-no">Quiero ir en bus
                   </Label>
+                </div>
+                <div className="items-center space-x-2">
+                  <RadioGroupItem value="no" id="bus-yes" onClick={(e) => {setFormBus("no")}}/>
+                  <Label htmlFor="bus-yes">Voy por mi cuenta</Label>
                 </div>
               </RadioGroup>
             </div>
@@ -259,7 +229,7 @@ export default function RSVP() {
           {step === 5 && (<div>
             <div className="flex flex-col items-center">
               <Image
-                  src="/formulario5.jpg"
+                  src="/wolf.gif"
                   alt="Sandra y Félix"
                   width={300}
                   height={200}
@@ -268,29 +238,57 @@ export default function RSVP() {
             </div>
             <div className="form-label">
               <Label htmlFor="musica" className="text-base sm:text-lg">
-                <b>Y, por último,</b> ¿qué temazo no puede faltar?
+                <b>Y, por último, {formName}</b> ¿qué canción te gustaria bailar?
               </Label>
-              <Textarea id="musica" name="musica" className="mt-1" onChange={(e) => setFormMusic(e.target.value)}/>
+              <Input id="musica" name="musica" placeholder="Canción y artista" required className="mt-1" value={formMusic} onChange={(e) => setFormMusic(e.target.value)}/>
             </div>
             <div className="flex gap-4 mt-4">
               <Button onClick={prevStep} className={`w-full`}>Atrás</Button>
               <Button type="submit" className={`w-full ${
-                isSending ? "opacity-50 cursor-not-allowed" : ""}`} 
-                disabled={isSending}>
-                {isSending ? (
-                  <img
-                    src="https://media.tenor.com/On7kvXhzml4AAAAi/loading.gif"
-                    alt="Cargando..."
-                    className="w-6 h-6"
-                  />
-                ) : (
-                  "Enviar"
-                )}
-              </Button>
+                    isSending ? "opacity-50 cursor-not-allowed" : ""}`} 
+                    disabled={isSending || formMusic == "" ? true:false} >
+                    {isSending ? (
+                      <img
+                        src="https://media.tenor.com/On7kvXhzml4AAAAi/loading.gif"
+                        alt="Cargando..."
+                        className="w-6 h-6"
+                      />
+                    ) : (
+                      "Enviar"
+                    )}
+                </Button>
             </div>
           </div>)}
+          {step === 6 && (<div>
+          <div className="flex flex-col items-center">
+            <Image
+                src="/formulario6.jpg"
+                alt="Sandra y Félix"
+                width={300}
+                height={200}
+                className="rounded-lg shadow-md form-img"
+              />
+          </div>
+          <CheckCircle2 className="h-12 w-12 gold mx-auto mb-4" />
+          {formAttending == "yes" ? (<div>
+            <h2 className="text-2xl font-serif text-primary mb-4 text-center">¡Millones de gracias por contestar {formName}, estamos encantados de poder contar contigo!
+              <br/>Intentaremos buscarte cuando suene {formMusic} 😘</h2>
+          </div>):(
+            <div>
+              <h2 className="text-2xl font-serif text-primary mb-4 text-center">¡Millones de gracias por contestar {formName}, sentimos mucho que no puedas acompañarnos en este dia tan especial!</h2>
+            </div>
+          )}
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground mb-4">
+              Si necesitas hacer cambios, por favor contáctanos directamente.
+            </p>
+              <Button onClick={resetForm} className="w-full max-w-xs">
+                Enviar otra respuesta
+              </Button>
+          </div>
+        </div>)}
         </form>
-      )}
+      {/* )} */}
     </div>
   )
 }

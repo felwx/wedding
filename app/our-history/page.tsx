@@ -69,25 +69,16 @@ export default function OurHistory() {
           <p className="text-lg text-center max-w-2xl">
           En nuestro pueblo nos conocimos, allí empezamos este bonito camino juntos. Después de 10 años y muchas aventuras compartidas, en Alcalá dimos el siguiente paso en nuestro camino. En la noche en la que celebramos nuestro décimo aniversario juntos, ocurrió algo inesperado…
           </p>
-          <VideoPlayer src="/pedida.mp4"/>
+          <Image
+            src="/historia4.jpg"
+            alt="Sandra y Félix"
+            width={300}
+            height={200}
+            className="rounded-lg shadow-md"
+          />
+          {/* <VideoPlayer src="/pedida.mp4"/> */}
         </div>
       </section>
-
-      {/* <section>
-        <h2 className="elegant-heading text-2xl sm:text-3xl mb-4 text-center">Nuestra historia en fotos</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="relative aspect-square">
-              <Image
-                src={`/placeholder.svg`}
-                alt={`Jane and John's journey ${i}`}
-                fill
-                className="object-cover rounded-lg shadow-md"
-              />
-            </div>
-          ))}
-        </div>
-      </section> */}
     </div>
   )
 }
