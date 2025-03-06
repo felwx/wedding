@@ -13,7 +13,7 @@ export default function Info() {
     { id: 6, title: "Bares" }
   ];
   const [showSection, setShowSection] = useState(1);
-  
+  const cardStyle = "w-full bg-white shadow-lg rounded-2xl p-6 text-center w-40 sm:w-48 md:w-56 lg:w-60 hover:bg-gray-100 transition";
   return (
     <div className="content-wrapper">
       <h1 className="elegant-heading text-3xl sm:text-4xl mb-6 md:mb-8 text-center">Información de la boda</h1>
@@ -31,15 +31,10 @@ export default function Info() {
           <p>Aquí tienes toda la información que necesitas</p>
           <div className="flex flex-wrap justify-center gap-4 p-4 w-full max-w-screen-lg mx-auto">
             {sections.map((section) => (
-              // <Link key={section.href} href={section.href}>
-              //   <div className="bg-white shadow-lg rounded-2xl p-6 text-center w-40 hover:bg-gray-100 transition">
-              //     <strong>{section.title}</strong>
-              //   </div>
-              // </Link>
               <button
               key={section.id}
               onClick={() => setShowSection(section.id)}
-              className="bg-white shadow-lg rounded-2xl p-6 text-center w-40 sm:w-48 md:w-56 lg:w-60 hover:bg-gray-100 transition"
+              className={showSection === section.id ? `active ${cardStyle}` : cardStyle}
             >
               <strong>{section.title}</strong>
             </button>

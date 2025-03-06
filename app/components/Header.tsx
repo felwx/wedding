@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Heart, Menu, X } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
-
+  const pathname = usePathname()
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
     document.body.style.overflow = isMenuOpen ? "auto" : "hidden"
@@ -41,15 +43,6 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        {/*<Link href="/" className="text-secondary-foreground hover:text-primary transition-colors duration-200">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.logo_boda_Fe%CC%81lix&Sandra_nombre_2-dCl6kZeVtV2Ud3yXCSie9C9vSRPZ83.png"
-            alt="Félix & Sandra Wedding Logo"
-            width={100}
-            height={100}
-            className="h-12 w-auto"
-          />
-        </Link>*/}
         <Link
           href="/"
           className="text-secondary-foreground hover:text-primary font-serif text-2xl md:text-3xl flex items-center transition-colors duration-200"
@@ -57,19 +50,19 @@ export function Header() {
           S <Heart className="h-4 w-4 mx-1 text-secondary gold" /> F
         </Link>
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className="menu-item">
+          <Link href="/" className={pathname == "/" ? "active menu-item" :"menu-item"}>
             Inicio
           </Link>
-          <Link href="/our-history" className="menu-item">
+          <Link href="/our-history" className={pathname == "/our-history" ? "active menu-item" :"menu-item"}>
             Nuestra historia
           </Link>
-          <Link href="/info" className="menu-item">
+          <Link href="/info" className={pathname == "/info" ? "active menu-item" :"menu-item"}>
             Información
           </Link>
           {/* <Link href="/gallery" className="menu-item">
             Galería
           </Link> */}
-          <Link href="/rsvp" className="menu-item">
+          <Link href="/rsvp" className={pathname == "/rsvp" ? "active menu-item" :"menu-item"}>
             Asistencia
           </Link>
         </nav>
