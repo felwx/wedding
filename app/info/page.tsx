@@ -1,5 +1,12 @@
 import Link from "next/link"
 
+const sections = [
+  { href: "#autobuses", title: "Autobuses" },
+  { href: "#ceremonia", title: "Ceremonia" },
+  { href: "#banquete", title: "Banquete" },
+  { href: "#parking", title: "Parquing" },
+];
+
 export default function Info() {
   return (
     <div className="content-wrapper">
@@ -16,11 +23,15 @@ export default function Info() {
           </p>
           <p className="mb-2">Si prefieres venir por tu cuenta el parking del tibidabo es tu mejor opción para llegar a la ceremonia. </p>
           <p>Aquí tienes toda la información que necesitas</p>
-          <p><Link href="#autobuses"><strong>Autobuses</strong></Link></p>
-          <p><Link href="#ceremonia"><strong>Ceremonia</strong></Link></p>
-          <p><Link href="#banquete"><strong>Banquete</strong></Link></p>
-          <p><Link href="#parking"><strong>Parquing Tibidabo</strong></Link></p>
-          
+          <div className="flex flex-col md:flex-row gap-4 justify-center p-4">
+            {sections.map((section) => (
+              <Link key={section.href} href={section.href}>
+                <div className="bg-white shadow-lg rounded-2xl p-6 text-center w-40 hover:bg-gray-100 transition">
+                  <strong>{section.title}</strong>
+                </div>
+              </Link>
+            ))}
+          </div>
         </section>
       </div>
       <div className="space-y-6 md:space-y-8">
