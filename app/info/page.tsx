@@ -24,8 +24,8 @@ export default function Info() {
               <strong>reservar plaza</strong></Link> en los autobuses que pondremos a tu disposición.
           </p>
           <p className="mb-2">
-            Si decides venir en autobús, solo te has de preocupar de decírnoslos <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
-              <strong>rellenando el formulario</strong></Link> y estar a la hora de salida, las 15:30 h en el Hotel Exe Parc del Vallès, Carrer dels Artesans, 8, 08290 Cerdanyola del Vallès, Barcelona.
+            Si decides venir en autobús, solo te has de preocupar de <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
+              <strong>rellenar el formulario</strong></Link> y estar a la hora de salida, las 15:30h en el Hotel Exe Parc del Vallès, Carrer dels Artesans, 8, 08290 Cerdanyola del Vallès, Barcelona.
           </p>
           <p className="mb-2">Si prefieres venir por tu cuenta, el parking del tibidabo es tu mejor opción para llegar a la ceremonia. </p>
           <p>Aquí tienes toda la información que necesitas</p>
@@ -178,7 +178,7 @@ export default function Info() {
             <strong>Bares donde tomar una cerveza fresquita:</strong> Nuestro bar favorito es "La pizarrita de Juanlu", donde con cada cerveza se acompaña con las mejores tapas.
           </p>
           <p className="mb-2">
-            <strong>Bares de Tapas:</strong>Ca L'enric, Chumi, Od bar bodega, Tempo di vino, Cal Pintxo...
+            <strong>Bares de Tapas:</strong> Ca L'enric, Chumi, Od bar bodega, Tempo di vino, Cal Pintxo...
           </p>
           <p className="mb-2">
             <strong>Restaurante:</strong> Od Bar, Tocat de l'Olla...

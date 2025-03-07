@@ -111,3 +111,8 @@ header, nav {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+i {
+  font-size: 14px;
+  line-height: 1;
+}

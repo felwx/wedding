@@ -186,8 +186,7 @@ export default function RSVP() {
             </div>
             <div className="form-label">
               <Label className="text-base sm:text-lg"><b>Transporte, ¿cómo has pensado llegar?</b> 
-                <br/><i>Te recordamos: Iglesia Tibidabo, banquete Celler de Can Torrens en Sant Fost de Campsentelles.</i>
-                <br/><i>Importante: pondremos a disposición un único horario de regreso al final de la fiesta de madrugada sobre 4:30h am</i></Label>
+                <br/><i><b>Importante:</b> pondremos a disposición un único horario de regreso al final de la fiesta de madrugada sobre 4:30h am</i></Label>
               <RadioGroup name="useBusService" className="form-radio" value={formBus}>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="yes" id="bus-no" onClick={(e) => {setFormBus("yes")}}/>
