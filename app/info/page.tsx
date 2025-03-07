@@ -6,7 +6,7 @@ import Link from "next/link"
 export default function Info() {
   const sections = [
     { id: 1, title: "Ceremonia" },
-    { id: 2, title: "Parquing Tibidabo" },
+    { id: 2, title: "Parking Tibidabo" },
     { id: 3, title: "Banquete" },
     { id: 4, title: "Autobuses" },
     { id: 5, title: "Hotel" },
@@ -27,7 +27,7 @@ export default function Info() {
             Si decides venir en autobús, solo te has de preocupar de <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
               <strong>rellenar el formulario</strong></Link> y estar a la hora de salida, las 15:30h en el Hotel Exe Parc del Vallès, Carrer dels Artesans, 8, 08290 Cerdanyola del Vallès, Barcelona.
           </p>
-          <p className="mb-2">Si prefieres venir por tu cuenta, el parking del tibidabo es tu mejor opción para llegar a la ceremonia. </p>
+          <p className="mb-2">Si prefieres venir por tu cuenta, el parking del Tibidabo es tu mejor opción para llegar a la ceremonia. </p>
           <p>Aquí tienes toda la información que necesitas</p>
           <div className="flex flex-wrap justify-center gap-4 p-4 w-full max-w-screen-lg mx-auto">
             {sections.map((section) => (
