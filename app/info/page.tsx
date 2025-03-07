@@ -27,7 +27,7 @@ export default function Info() {
             Si decides venir en autobús, solo te has de preocupar de decírnoslos <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
               <strong>rellenando el formulario</strong></Link> y estar a la hora de salida, las 15:30 h en el Hotel Exe Parc del Vallès, Carrer dels Artesans, 8, 08290 Cerdanyola del Vallès, Barcelona.
           </p>
-          <p className="mb-2">Si prefieres venir por tu cuenta el parking del tibidabo es tu mejor opción para llegar a la ceremonia. </p>
+          <p className="mb-2">Si prefieres venir por tu cuenta, el parking del tibidabo es tu mejor opción para llegar a la ceremonia. </p>
           <p>Aquí tienes toda la información que necesitas</p>
           <div className="flex flex-wrap justify-center gap-4 p-4 w-full max-w-screen-lg mx-auto">
             {sections.map((section) => (
@@ -49,7 +49,7 @@ export default function Info() {
             <strong>Fecha:</strong> 05 de abril de 2025
           </p>
           <p className="mb-2">
-            <strong>Hora:</strong> 16:30 h
+            <strong>Hora:</strong> 16:30h
           </p>
           <p className="mb-2">
             <strong>Lugar:</strong> Templo del Sagrado Corazón de Jesús, Ctra. de Vallvidrera al Tibidabo, 111, Distrito de Sarrià-Sant Gervasi, 08035 Barcelona
@@ -74,7 +74,7 @@ export default function Info() {
         {showSection === 2 && (<section id="parking" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Parking Tibidabo</h2>
           <p className="mb-2">
-            Si vienes en coche el Tibidabo dispone de parking, es el único lugar donde podrás aparcar. 
+            Si vienes en coche, el Tibidabo dispone de parking, es el único lugar donde podrás aparcar. 
           </p>
           <p className="mb-2">
             <strong>Lugar:</strong> Parking Parque de atracciones Tibidabo
@@ -101,7 +101,7 @@ export default function Info() {
             <strong>Fecha:</strong> 05 de abril de 2025
           </p>
           <p className="mb-2">
-            <strong>Hora:</strong> 19:00 h
+            <strong>Hora:</strong> 19:00h
           </p>
           <p className="mb-2">
             <strong>Lugar:</strong> El Celler de Can Torrens, Pl. de les Glòries Catalanes, 3, 08105 Sant Fost de Campsentelles, Barcelona
@@ -123,7 +123,7 @@ export default function Info() {
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Autobuses</h2>
           <p className="mb-2">Hemos contratado un servicio de autobuses para todo el que quiera utilizarlo</p>
           <p className="mb-2">
-            Para tener plazas para todos por favor rellena el <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
+            Para tener plazas para todos, por favor rellena el <Link href="/rsvp" className="hover:text-primary transition-colors duration-200">
               <strong>formulario de asistencia</strong>
             </Link>
           </p>
@@ -131,7 +131,7 @@ export default function Info() {
             <strong>Fecha:</strong> 05 de abril de 2025
           </p>
           <p className="mb-2">
-            <strong>Hora de salida:</strong> 15:45 h
+            <strong>Hora de salida:</strong> 15:30h
           </p>
           <p className="mb-2">
             <strong>Hora de regreso:</strong> Cuando acabe la fiesta...
@@ -154,7 +154,7 @@ export default function Info() {
         </section>)}
         {showSection === 5 && (<section id="hotel" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Hotel</h2>
-          <p className="mb-2">Esta es la ubicación del hotel donde estais alojados. El autobús saldrá desde este punto a las 15:45 h</p>
+          <p className="mb-2">Esta es la ubicación del hotel donde estáis alojados. El autobús saldrá desde este punto a las 15:30h</p>
           <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5026.489379567399!2d2.1270257002544555!3d41.48761903565177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4966cafaede53%3A0xd0088935cd7bc35e!2sHotel%20Exe%20Parc%20del%20Vall%C3%A8s!5e0!3m2!1ses!2ses!4v1738765639778!5m2!1ses!2ses"
@@ -170,12 +170,12 @@ export default function Info() {
         </section>)}
         {showSection === 6 && (<section id="bares" className="bg-card p-4 md:p-6 rounded-lg shadow-md">
           <h2 className="elegant-heading text-xl sm:text-2xl mb-3 md:mb-4">Bares</h2>
-          <p className="mb-2">Muy cerca del hotel está la calle Sant Ramon, donde encontrareis todos los bares que necesitais.</p>
+          <p className="mb-2">Muy cerca del hotel está la calle Sant Ramon, donde encontraréis todos los bares que necesiteis.</p>
           <p className="mb-2">
-            <strong>Cafeterias:</strong> El informal, Granier...
+            <strong>Cafeterías:</strong> El informal, Granier...
           </p>
           <p className="mb-2">
-            <strong>Bares donde tomar una cerveza fresquita:</strong> Nuestro bar favorito es "La pizarrita de Juanlu", donde con cada cerveza se acompañana con las mejores tapas.
+            <strong>Bares donde tomar una cerveza fresquita:</strong> Nuestro bar favorito es "La pizarrita de Juanlu", donde con cada cerveza se acompaña con las mejores tapas.
           </p>
           <p className="mb-2">
             <strong>Bares de Tapas:</strong>Ca L'enric, Chumi, Od bar bodega, Tempo di vino, Cal Pintxo...

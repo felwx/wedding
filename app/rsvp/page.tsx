@@ -116,7 +116,7 @@ export default function RSVP() {
             </div>
             <div className="form-label">
               <Label htmlFor="name" className="text-base sm:text-lg">
-                Primero dinos como te llamas
+                Primero, dinos cómo te llamas
               </Label>
               <Input id="name" name="name" placeholder="Tu nombre" type="text" required className="mt-1" value={formName} onChange={(e) => setFormName(e.target.value)}/>
             </div>
@@ -238,7 +238,7 @@ export default function RSVP() {
             </div>
             <div className="form-label">
               <Label htmlFor="musica" className="text-base sm:text-lg">
-                <b>Y, por último, {formName}</b> ¿qué canción te gustaria bailar?
+                <b>Y, por último, {formName}</b> ¿qué canción te gustaría escuchar?
               </Label>
               <Input id="musica" name="musica" placeholder="Canción y artista" required className="mt-1" value={formMusic} onChange={(e) => setFormMusic(e.target.value)}/>
             </div>
