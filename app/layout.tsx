@@ -16,7 +16,7 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Sandra & Félix",
   description: "Acompáñanos a celebrar nuestro día especial",
-    generator: 'v0.dev'
+  image: "https://v0-boda-alpha.vercel.app/megabanner.jpg"
 }
 
 export default function RootLayout({
