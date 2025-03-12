@@ -16,7 +16,26 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Sandra & Félix",
   description: "Acompáñanos a celebrar nuestro día especial",
-  image: "https://v0-boda-alpha.vercel.app/megabanner.jpg"
+  openGraph: {
+    title: "Sandra & Félix",
+    description: "Acompáñanos a celebrar nuestro día especial",
+    url: "https://v0-boda-alpha.vercel.app/",
+    type: "website",
+    images: [
+      {
+        url: "https://v0-boda-alpha.vercel.app/megabanner.jpg",
+        width: 1635,
+        height: 668,
+        alt: "Invitación de boda",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sandra & Félix",
+    description: "Acompáñanos a celebrar nuestro día especial",
+    images: ["https://v0-boda-alpha.vercel.app/megabanner.jpg"],
+  },
 }
 
 export default function RootLayout({
